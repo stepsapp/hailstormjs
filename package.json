@@ -1,0 +1,34 @@
+{
+    "name": "hailstorm",
+    "version": "1.0.25",
+    "description": "",
+    "main": "cli.js",
+    "repository": {
+        "url": "https://github.com/coretracker/hailstormjs/issues"
+    },
+    "scripts": {
+        "start": "node ./cli.js start",
+        "start:dev": "node ./cli.js watch",
+        "build": "node ./cli.js build"
+    },
+    "bin": {
+        "hailstorm": "./cli.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "autoprefixer": "^10.4.12",
+        "express": "^4.18.1",
+        "nodemon": "^2.0.20",
+        "postcss": "^8.4.16",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "tailwindcss": "^3.1.8",
+        "@babel/cli": "^7.18.10",
+        "@babel/core": "^7.19.1",
+        "@babel/preset-env": "^7.19.1",
+        "@babel/preset-react": "^7.18.6",
+        "@babel/register": "^7.18.9"
+    }
+}
