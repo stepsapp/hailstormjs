@@ -3,4 +3,58 @@
 </p>
 
 # Hailstormjs
-A real react static website generate
+
+A real react static website generator
+
+### Headbanging with:
+
+-   😱 React
+-   👽 PostCSS
+-   ⭐️ Tailwindcss
+-   🔥 Firebase
+-   🙊 Internationalization
+
+### Coming up next:
+
+-   Livereload
+-   [React hydrateRoot](https://reactjs.org/docs/react-dom-client.html#hydrateroot)
+-   Typescript
+-   Something fancy to minify, build etc.
+-   Crazy tests
+-   Lazy Load Modules
+
+## Installation
+
+NPM:
+
+```
+$ npn install @stepsapp/hailstormjs
+```
+
+PNPM:
+
+```
+$ pnpm add @stepsapp/hailstormjs
+```
+
+Add scripts to your **package.json**
+
+```
+{
+    scripts: {
+        "start": "hailstorm start",
+        "start:dev": "hailstorm watch",
+        "build": "hailstorm build"
+    }
+}
+```
+
+## Getting Started
+
+1. Start hailstorm
+```
+$ npm run start:dev
+```
+
+2. Open http://localhost:3000 in your browser.
+3. Start editing src/pages/index.jsx
