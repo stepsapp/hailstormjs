@@ -5,8 +5,6 @@ require('./lib/modules/babel')
 const recursiveCopy = require('./lib/modules/recursiveCopyFiles')
 var nodemon = require('nodemon')
 
-console.log(helpers.paths)
-
 const exec = async (cmd) => {
     switch (cmd) {
         case 'start':
@@ -16,11 +14,13 @@ const exec = async (cmd) => {
             require('./lib/build')
             break
         case 'init':
-            console.log('Copying files from module to application /src/pages')
+            console.log('Copying tailwind config.')
+            await recursiveCopy.copyFiles(`${helpers.paths.moduleRoot}/tailwind.config.js`, `${helpers.paths.applicationRoot}/tailwind.config.js`)
+            console.log('Copying files from module to application /src/pages.')
             await recursiveCopy.copyFiles(`${helpers.paths.moduleRoot}/src/pages`, `${helpers.paths.applicationRoot}/src/pages`)
-            console.log('Copying files from module to application /src/public')
+            console.log('Copying files from module to application /src/public.')
             await recursiveCopy.copyFiles(`${helpers.paths.moduleRoot}/src/public`, `${helpers.paths.applicationRoot}/src/public`)
-            console.log('Copying files from module to application /src/components')
+            console.log('Copying files from module to application /src/components.')
             await recursiveCopy.copyFiles(`${helpers.paths.moduleRoot}/src/components`, `${helpers.paths.applicationRoot}/src/components`)
             break
         case 'watch':
