@@ -16,25 +16,12 @@ switch (cmd) {
         require('./lib/build')
         break
     case 'init':
-        if (!fs.existsSync(`${helpers.paths.applicationRoot}/src`)) {
-            console.log('Copying files from module to application root')
-            recursiveCopy.copyFiles(`${helpers.paths.moduleRoot}/src`, `${helpers.paths.applicationRoot}/src`)
-        } else {
-            console.log('Application /src exists')
-            if (!fs.existsSync(`${helpers.paths.applicationRoot}/src/pages`)) {
-                console.log('Copying files from module to application /src/pages')
-                recursiveCopy.copyFiles(`${helpers.paths.moduleRoot}/src/pages`, `${helpers.paths.applicationRoot}/src/pages`).then(() => {
-                    if (!fs.existsSync(`${helpers.paths.applicationRoot}/src/public`)) {
-                        console.log('Copying files from module to application /src/public')
-                        recursiveCopy.copyFiles(`${helpers.paths.moduleRoot}/src`, `${helpers.paths.applicationRoot}/src/public`)
-                    } else {
-                        console.log('Application /src/public exists')
-                    }
-                })
-            } else {
-                console.log('Application /src/pages exists')
-            }
-        }
+        console.log('Copying files from module to application /src/pages')
+        await recursiveCopy.copyFiles(`${helpers.paths.moduleRoot}/src/pages`, `${helpers.paths.applicationRoot}/src/pages`)
+        console.log('Copying files from module to application /src/public')
+        await recursiveCopy.copyFiles(`${helpers.paths.moduleRoot}/src/public`, `${helpers.paths.applicationRoot}/src/public`)
+        console.log('Copying files from module to application /src/components')
+        await recursiveCopy.copyFiles(`${helpers.paths.moduleRoot}/src/components`, `${helpers.paths.applicationRoot}/src/components`)
         break
     case 'watch':
         nodemon({
