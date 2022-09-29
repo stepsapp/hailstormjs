@@ -15,7 +15,7 @@ const exec = async (cmd) => {
             break
         case 'init':
             console.log('Copying tailwind config.')
-            await recursiveCopy.copyFiles(`${helpers.paths.moduleRoot}/tailwind.config.js`, `${helpers.paths.applicationRoot}/tailwind.config.js`)
+            await recursiveCopy.copyFile(`${helpers.paths.moduleRoot}/tailwind.config.js`, `${helpers.paths.applicationRoot}/tailwind.config.js`)
             console.log('Copying files from module to application /src/pages.')
             await recursiveCopy.copyFiles(`${helpers.paths.moduleRoot}/src/pages`, `${helpers.paths.applicationRoot}/src/pages`)
             console.log('Copying files from module to application /src/public.')
