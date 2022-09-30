@@ -24,38 +24,33 @@ A real react static website generator
 -   Something fancy to minify, build etc.
 -   Crazy tests
 
-
 ## Installation
 
-NPM:
-
 ```
-$ npn install @stepsapp/hailstormjs
-```
-
-PNPM:
-
-```
-$ pnpm add @stepsapp/hailstormjs
-```
-
-Add scripts to your **package.json**
-
-```
-{
-    scripts: {
-        "start": "hailstorm start",
-        "build": "hailstorm build"
-    }
-}
+$ npm install @stepsapp/hailstormjs
 ```
 
 ## Getting Started
 
-1. Start hailstorm
+1. Initialize Hailstorm
+
 ```
-$ npm run start:dev
+$ npm exec hailstorm init
 ```
 
-2. Open http://localhost:3000 in your browser.
-3. Start editing src/pages/index.jsx
+2. Start Hailstorm
+
+```
+$ npm exec hailstorm start
+```
+
+3. Open http://localhost:3000 in your browser.
+4. Start editing src/pages/index.jsx
+5. Generate Static Files
+
+```
+$ npm exec hailstorm build
+```
+
+## Documentation
+Coming Soon. Meanwhile check /src/pages
