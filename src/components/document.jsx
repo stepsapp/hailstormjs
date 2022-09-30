@@ -6,6 +6,7 @@ export default ({ children, title }) => (
         <head>
             <title>{title}</title>
             <link rel='stylesheet' href='/css/styles.css' />
+            <script src='/livereload.js' />
         </head>
         <main>
             <div className='container mx-auto'>{children}</div>

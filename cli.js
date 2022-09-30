@@ -24,22 +24,24 @@ const exec = async (cmd) => {
             await recursiveCopy.copyFiles(`${helpers.paths.moduleRoot}/src/components`, `${helpers.paths.applicationRoot}/src/components`)
             break
         case 'watch':
+            
             nodemon({
                 script: `${helpers.paths.moduleRoot}/lib/main.js`,
                 ext: 'js json css jsx html',
                 ignore: ['cache/**', 'dist/**'],
             })
-            nodemon
-                .on('start', function () {
-                    console.log('Building App.')
-                })
-                .on('quit', function () {
-                    console.log('App has quit')
-                    process.exit()
-                })
-                .on('restart', function (files) {
-                    console.log('Re-Building App because of changes.')
-                })
+
+             nodemon
+                 .on('start', function () {
+                     console.log('Building App.')
+                 })
+                 .on('quit', function () {
+                     console.log('App has quit')
+                     process.exit()
+                 })
+                 .on('restart', function (files) {
+                     console.log('Re-Building App because of changes.')
+                 })
             break
     }
 }
