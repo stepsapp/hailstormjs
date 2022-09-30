@@ -44,7 +44,6 @@ Add scripts to your **package.json**
 {
     scripts: {
         "start": "hailstorm start",
-        "start:dev": "hailstorm watch",
         "build": "hailstorm build"
     }
 }
