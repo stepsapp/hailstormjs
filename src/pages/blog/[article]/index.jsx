@@ -37,6 +37,5 @@ export const pageLocales = async () => {
 }
 
 export const pageStaticPathProperties = async (data) => {
-    console.log(data)
     return [{ article: 'article-1' }, { article: 'article-2' }]
 }
