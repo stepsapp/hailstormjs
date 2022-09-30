@@ -13,15 +13,16 @@ A real react static website generator
 -   ⭐️ Tailwindcss
 -   🔥 Firebase
 -   🙊 Internationalization
+-   📡 Livereload
+-   ❤️‍🔥 Hot-Reload
 
 ### Coming up next:
 
--   Livereload
 -   [React hydrateRoot](https://reactjs.org/docs/react-dom-client.html#hydrateroot)
 -   Typescript
 -   Something fancy to minify, build etc.
 -   Crazy tests
--   Lazy Load Modules
+
 
 ## Installation
 

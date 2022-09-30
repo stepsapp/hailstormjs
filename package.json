@@ -8,7 +8,6 @@
     },
     "scripts": {
         "start": "node ./cli.js start",
-        "start:dev": "node ./cli.js watch",
         "build": "node ./cli.js build"
     },
     "bin": {
@@ -25,7 +24,6 @@
         "@babel/register": "^7.18.9",
         "autoprefixer": "^10.4.12",
         "express": "^4.18.1",
-        "nodemon": "^2.0.20",
         "postcss": "^8.4.16",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
