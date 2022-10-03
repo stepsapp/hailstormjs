@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+'use strict'
+
 require('./lib/modules/babel')
 const helpers = require('./lib/modules/helpers')
 const recursiveCopy = require('./lib/modules/recursiveCopyFiles')
