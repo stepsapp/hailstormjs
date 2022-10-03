@@ -4,7 +4,7 @@ const React = require('react')
 export default ({ children, title }) => (
     <html>
         <head>
-            <title>{title}</title>
+            <title>{title} 123</title>
             <link rel='stylesheet' href='/css/styles.css' />
             <script src='/livereload.js' />
         </head>

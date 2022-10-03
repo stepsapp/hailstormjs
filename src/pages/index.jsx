@@ -1,5 +1,5 @@
 const React = require('react')
-import Document from '../components/document'
+import Document from '../components/document.jsx'
 
 export default () => (
     <Document>
