@@ -1,8 +1,9 @@
-import Document from '../../../components/document'
+import Document from '../../../components/document.jsx'
 
 const React = require('react')
 
-export default ({ title, body }) => {
+export default ({ params, props}) => {
+    var {title, body} = props
     return (
         <Document>
             <h1>{title}</h1>
@@ -11,7 +12,8 @@ export default ({ title, body }) => {
     )
 }
 
-export const pageProperties = async ({ locale }) => {
+export const pageProperties = async (data) => {
+    var locale = null
     var title = 'Sun'
     var body = `The Sun is the star at the center of the Solar System. 
     It is a nearly perfect ball of hot plasma,[18][19] heated to incandescence by nuclear fusion reactions in its core,

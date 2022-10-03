@@ -2,7 +2,7 @@
   <img width="150" height="150" src="./docs/images/hailstorm.png">
 </p>
 
-# Hailstormjs
+# Hailstormjs ![Downloads](https://img.shields.io/npm/dm/@stepsapp//hailstormjs) ![Version](https://img.shields.io/npm/v/@stepsapp/hailstormjs)
 
 A real react static website generator
 
