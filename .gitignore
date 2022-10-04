@@ -81,3 +81,4 @@ dist
 .firebasesrc
 
 .DS_Store
+.parcel-cache
