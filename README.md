@@ -11,6 +11,7 @@ A real react static website generator
 -   😱 React
 -   👽 PostCSS
 -   ⭐️ Tailwindcss
+-   🔝 esbuild
 -   🔥 Firebase
 -   🙊 Internationalization
 -   📡 Livereload

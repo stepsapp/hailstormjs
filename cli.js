@@ -2,8 +2,8 @@
 'use strict'
 
 require('./lib/modules/babel')
-const helpers = require('./lib/modules/helpers')
-const recursiveCopy = require('./lib/modules/recursiveCopyFiles')
+
+const { paths, copyFiles, copyFile } = require('./lib/modules/common')
 
 const exec = async (cmd) => {
     switch (cmd) {
@@ -15,13 +15,9 @@ const exec = async (cmd) => {
             break
         case 'init':
             console.log('Copying tailwind config.')
-            await recursiveCopy.copyFile(`${helpers.paths.moduleRoot}/tailwind.config.js`, `${helpers.paths.applicationRoot}/tailwind.config.js`)
-            console.log('Copying files from module to application /src/pages.')
-            await recursiveCopy.copyFiles(`${helpers.paths.moduleRoot}/src/pages`, `${helpers.paths.applicationRoot}/src/pages`)
-            console.log('Copying files from module to application /src/public.')
-            await recursiveCopy.copyFiles(`${helpers.paths.moduleRoot}/src/public`, `${helpers.paths.applicationRoot}/src/public`)
-            console.log('Copying files from module to application /src/components.')
-            await recursiveCopy.copyFiles(`${helpers.paths.moduleRoot}/src/components`, `${helpers.paths.applicationRoot}/src/components`)
+            await copyFile(`${paths.moduleRoot}/tailwind.config.js`, `${paths.applicationRoot}/tailwind.config.js`)
+            console.log('Copying requirements')
+            await copyFiles(`${paths.moduleRoot}/src`, `${paths.applicationRoot}/src`)
             break
     }
 }
