@@ -2,10 +2,14 @@
 'use strict'
 
 require('./lib/modules/babel')
+var pjson = require('./package.json')
 
-const { paths, copyFiles, copyFile } = require('./lib/modules/common')
+const { paths, copyFiles, copyFile, logger } = require('./lib/modules/common')
+
+
 
 const exec = async (cmd) => {
+    logger.info(`HailstormJS - ${pjson.version}`)
     switch (cmd) {
         case 'start':
             require('./lib/main')
