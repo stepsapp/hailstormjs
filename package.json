@@ -1,6 +1,6 @@
 {
     "name": "@stepsapp/hailstormjs",
-    "version": "0.0.12",
+    "version": "0.0.13",
     "description": "A real react static website generate",
     "main": "cli.js",
     "repository": {
