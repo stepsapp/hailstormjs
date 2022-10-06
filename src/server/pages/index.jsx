@@ -65,7 +65,7 @@ export default () => (
                             or at least version 16. Then install hailstormjs via commandline in your project root.
                         </p>
                         <div className='bg-black/5 p-5 rounded-md text-sm'>
-                            <code>$ npm install hailstormjs</code>
+                            <code>$ npm i @stepsapp/hailstormjs</code>
                         </div>
                     </div>
                 </div>
