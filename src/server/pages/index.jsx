@@ -28,6 +28,7 @@ export default () => (
                     Download
                 </a>
             </div>
+            
             <div className='mx-auto my-10'>
                 <hr />
             </div>
