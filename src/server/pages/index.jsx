@@ -10,6 +10,24 @@ export default () => (
             <p className='md:w-1/2 lg:w-1/3 block text-black/30'>
                 Hailstorm helps you to build static websites which are SEO and multi-language compatible and offers a hassle free environment for developers.
             </p>
+            <div className='pt-5 flex gap-1'>
+                <img src='https://img.shields.io/npm/v/@stepsapp/hailstormjs' className='inline' />
+                <img src='https://img.shields.io/npm/dm/@stepsapp//hailstormjs' className='inline' />
+                <a
+                    className='github-button pr-2 inline-block'
+                    href='https://github.com/stepsapp/hailstormjs'
+                    data-icon='octicon-star'
+                    aria-label='Star stepsapp/hailstormjs on GitHub'>
+                    Star
+                </a>{' '}
+                <a
+                    className='github-button'
+                    href='https://github.com/stepsapp/hailstormjs/archive/HEAD.zip'
+                    data-icon='octicon-download'
+                    aria-label='Download stepsapp/hailstormjs on GitHub'>
+                    Download
+                </a>
+            </div>
             <div className='mx-auto my-10'>
                 <hr />
             </div>
@@ -58,7 +76,7 @@ export default () => (
                     <div className='mb-10'>
                         <h3 className='text-xl mb-3'>Installation</h3>
                         <p className='text-sm text-black/50 mb-3'>
-                            Make sure you have installed the lastest version of{' '}
+                            1. Make sure you have installed the lastest version of{' '}
                             <a href='https://nodejs.org/' rel='' target='_blank' className='underline hover:cursor-pointer'>
                                 nodejs
                             </a>{' '}
@@ -67,9 +85,37 @@ export default () => (
                         <div className='bg-black/5 p-5 rounded-md text-sm'>
                             <code>$ npm i @stepsapp/hailstormjs</code>
                         </div>
+                        <p className='text-sm text-black/50 mb-3 mt-5'>2. Initialise everything hailstorm needs</p>
+                        <div className='bg-black/5 p-5 rounded-md text-sm'>
+                            <code>$ npx exec hailstorm init</code>
+                        </div>
+                        <p className='text-sm text-black/50 mb-3 mt-5'>3. Start your development environment</p>
+                        <div className='bg-black/5 p-5 rounded-md text-sm'>
+                            <code>$ npx exec hailstorm start</code>
+                        </div>
                     </div>
                 </div>
-                <div></div>
+                <div>
+                    <div className='rounded-tl-lg rounded-tr-lg bg-black/5 mx-auto' style={{ maxWidth: '540px' }}>
+                        <div className='px-2'>
+                            <span className='rounded-full inline-block my-2 mx-1' style={{ width: '12px', height: '12px', backgroundColor: '#e74c3c' }}></span>
+                            <span className='rounded-full inline-block my-2 mx-1' style={{ width: '12px', height: '12px', backgroundColor: '#f1c40f' }}></span>
+                            <span className='rounded-full inline-block my-2 mx-1' style={{ width: '12px', height: '12px', backgroundColor: '#2ecc71' }}></span>
+                        </div>
+                        <video width='100%' autoPlay loop>
+                            <source src='/images/install.mp4' type='video/mp4' />
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div className='mx-auto my-10'>
+                <hr />
+            </div>
+            <div className='text-sm'>
+                Made with ❤️{' '}
+                <a href='https://steps.app' className='underline hover:cursor-pointer'>
+                    @stepsapp
+                </a>
             </div>
         </div>
     </Document>
