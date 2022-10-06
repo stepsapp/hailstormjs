@@ -1,3 +1,5 @@
+import React from "react"
+
 function connectWebsocket() {
     if ('WebSocket' in window) {
         // Let us open a web socket
@@ -22,4 +24,4 @@ function connectWebsocket() {
     }
 }
 
- connectWebsocket()
+connectWebsocket()

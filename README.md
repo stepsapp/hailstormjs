@@ -12,6 +12,7 @@ A real react static website generator
 -   😱 React
 -   👽 PostCSS
 -   ⭐️ Tailwindcss
+-   🔝 esbuild
 -   🔥 Firebase
 -   🙊 Internationalization
 -   📡 Livereload
@@ -20,9 +21,7 @@ A real react static website generator
 ### Coming up next:
 
 -   Better Logging
--   [React hydrateRoot](https://reactjs.org/docs/react-dom-client.html#hydrateroot)
 -   Typescript
--   Something fancy to minify, build etc.
 -   Crazy tests
 
 ## Installation

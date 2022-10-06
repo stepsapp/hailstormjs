@@ -1,6 +1,6 @@
 {
     "name": "@stepsapp/hailstormjs",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "description": "A real react static website generate",
     "main": "cli.js",
     "repository": {
@@ -26,7 +26,10 @@
         "@parcel/core": "^2.7.0",
         "autoprefixer": "^10.4.12",
         "chokidar": "^3.5.3",
+        "esbuild": "^0.15.10",
         "express": "^4.18.1",
+        "pino": "^8.6.1",
+        "pino-pretty": "^9.1.0",
         "postcss": "^8.4.16",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
