@@ -23,5 +23,4 @@ function connectWebsocket() {
         alert('WebSocket NOT supported by your Browser!')
     }
 }
-
-connectWebsocket()
+if (location.host.includes('localhost')) {connectWebsocket()}
