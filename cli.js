@@ -21,7 +21,7 @@ const exec = async (cmd) => {
             console.log('Copying tailwind config.')
             await copyFile(`${paths.moduleRoot}/tailwind.config.js`, `${paths.applicationRoot}/tailwind.config.js`)
             console.log('Copying requirements')
-            await copyFiles(`${paths.moduleRoot}/src`, `${paths.applicationRoot}/src`)
+            await copyFiles(`${paths.moduleRoot}/src`, `${paths.applicationRoot}/src`, {})
             break
     }
 }
