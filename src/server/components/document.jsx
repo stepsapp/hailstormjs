@@ -8,7 +8,7 @@ export default ({ children, title }) => (
             <link rel='stylesheet' href='/css/styles.css' />
         </head>
         <body>
-            <div className='container mx-auto'>{children}</div>
+            {children}
             <script src='/client/bundle.js' />
         </body>
     </html>
