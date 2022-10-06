@@ -1,6 +1,6 @@
 {
     "name": "@stepsapp/hailstormjs",
-    "version": "0.0.10",
+    "version": "0.0.12",
     "description": "A real react static website generate",
     "main": "cli.js",
     "repository": {
@@ -13,7 +13,7 @@
     "bin": {
         "hailstorm": "cli.js"
     },
-    "keywords": [],
+    "keywords": ["front-end", "react server side", "ssr", "react", "hailstorm", "hailstormjs"],
     "author": "Andreas Gruber",
     "license": "MIT",
     "dependencies": {
