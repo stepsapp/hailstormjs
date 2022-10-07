@@ -2,7 +2,9 @@ const React = require('react')
 import Document from '../components/document.jsx'
 
 export default () => (
-    <Document title='HailstormJS'>
+    <Document
+        title='HailstormJS'
+        description='Hailstorm helps you to build static websites which are SEO and multi-language compatible and offers a hassle free environment for developers.'>
         <div className='container mx-auto py-10 px-10'>
             <img src='/images/hailstorm.png' width='64px' className='inline' />
             <h1 className='text-5xl font-bold mb-5 mt-5 text-black'>Hailstorm JS</h1>
@@ -28,7 +30,7 @@ export default () => (
                     Download
                 </a>
             </div>
-            
+
             <div className='mx-auto my-10'>
                 <hr />
             </div>
@@ -103,7 +105,7 @@ export default () => (
                             <span className='rounded-full inline-block my-2 mx-1' style={{ width: '12px', height: '12px', backgroundColor: '#f1c40f' }}></span>
                             <span className='rounded-full inline-block my-2 mx-1' style={{ width: '12px', height: '12px', backgroundColor: '#2ecc71' }}></span>
                         </div>
-                        <video width='100%' autoPlay loop>
+                        <video width='100%' autoPlay loop controls>
                             <source src='/images/install.mp4' type='video/mp4' />
                         </video>
                     </div>
