@@ -8,6 +8,7 @@ A real react static website generator
 
 ### Headbanging with:
 
+-   🏎 Express
 -   😱 React
 -   👽 PostCSS
 -   ⭐️ Tailwindcss
