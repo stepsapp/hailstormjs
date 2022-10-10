@@ -13,7 +13,7 @@ export default () => (
                     <a href='/blog'>Blog Overview</a>
                 </li>
                 <li className='font-medium hover:underline'>
-                    <a href='/blog/article-1'>Blog Article 1</a>
+                    <a href='/blog/article-1'>Blog Article</a>
                 </li>
                 <li className='font-medium hover:underline'>
                     <a href='/blog/article-2'>Blog Article 2</a>

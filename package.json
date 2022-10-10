@@ -13,7 +13,14 @@
     "bin": {
         "hailstorm": "cli.js"
     },
-    "keywords": ["front-end", "react server side", "ssr", "react", "hailstorm", "hailstormjs"],
+    "keywords": [
+        "front-end",
+        "react server side",
+        "ssr",
+        "react",
+        "hailstorm",
+        "hailstormjs"
+    ],
     "author": "Andreas Gruber",
     "license": "MIT",
     "dependencies": {
@@ -34,6 +41,7 @@
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "tailwindcss": "^3.1.8",
+        "winston": "^3.8.2",
         "ws": "^8.9.0"
     },
     "directories": {
