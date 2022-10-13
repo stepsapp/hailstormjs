@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Navigation from './navigation';
 
-const Component = ({ children, title, localization }) => (
+const Component = ({ children, title }) => (
   <html lang="en">
     <head>
       <title>{title}</title>
       <link rel="stylesheet" href="/css/styles.css" />
     </head>
     <body>
-      <Navigation localization={localization} />
       <div className="container mx-auto">{children}</div>
       <script src="/client/bundle.js" />
     </body>
