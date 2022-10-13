@@ -20,7 +20,6 @@ A real react static website generator
 
 ### Coming up next:
 
--   Better Logging
 -   Typescript
 -   Crazy tests
 
