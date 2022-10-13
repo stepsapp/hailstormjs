@@ -18,6 +18,6 @@
     ],
     "rules": {
         "implicit-arrow-linebreak": "off",
-        "import/extensions": "never"
+        "react/function-component-definition": "off"
     }
 }

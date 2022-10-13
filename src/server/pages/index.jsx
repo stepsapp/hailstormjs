@@ -1,28 +1,35 @@
 import React from 'react';
-import Document from '../components/document.jsx';
+import PropTypes from 'prop-types';
+import Document from '../components/document';
 
-function Component() {
-  return (
-    <Document>
-      <div className="mt-10 text-center">
-        <img className="inline" src="/images/hailstorm.png" style={{ width: 150 }} alt="logo" />
-        <h1 className="text-5xl font-bold mb-5 mt-5">HailstormJS</h1>
-        <h2>Start editing src/pages/index.jsx</h2>
-        <ul className="mt-10">
-          <li>Examples:</li>
-          <li className="font-medium hover:underline">
-            <a href="/blog">Blog Overview</a>
-          </li>
-          <li className="font-medium hover:underline">
-            <a href="/blog/article-1">Blog Article</a>
-          </li>
-          <li className="font-medium hover:underline">
-            <a href="/blog/article-2">Blog Article 2</a>
-          </li>
-        </ul>
-      </div>
-    </Document>
-  );
-}
+const HomePage = ({ localization }) => (
+  <Document localization={localization}>
+    <div className="mt-10 pt-10 text-center">
+      <h1 className="text-5xl font-bold mb-5 mt-5">🥳</h1>
+      <h1 className="text-5xl font-bold mb-5 mt-5">Congratulations</h1>
+      <h2 className="text-black/50 text-6xl">Hailstorm is set up.</h2>
+    </div>
+  </Document>
+);
 
-export default Component;
+HomePage.defaultProps = {
+  localization: {
+    path: '',
+    basePath: '',
+    locale: 'en',
+    locales: ['en'],
+  },
+};
+
+HomePage.propTypes = {
+  localization: PropTypes.shape({
+    path: PropTypes.string,
+    basePath: PropTypes.string,
+    locale: PropTypes.string,
+    locales: PropTypes.arrayOf(PropTypes.string),
+  }),
+};
+
+export default HomePage;
+
+export const locales = () => ['en'];

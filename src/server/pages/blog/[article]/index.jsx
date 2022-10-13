@@ -1,43 +1,51 @@
-import Document from '../../../components/document.jsx';
+import React from 'react';
+import PropTypes from 'prop-types';
+import Document from '../../../components/document';
 
-const React = require('react');
-
-export default ({properties}) => {
-  var { title, body } = properties;
+const BlogArticlePage = ({ properties, localization }) => {
+  const { title, body } = properties;
   return (
-    <Document>
-      <h1>{title}</h1>
+    <Document localization={localization}>
+      <h1 className="text-2xl mt-10 mb-5">{title}</h1>
       <p>{body}</p>
     </Document>
   );
 };
 
-export const pageProperties = async (data) => {
-  var locale = data.localization.locale;
-  var title = 'Sun';
-  var body = `The Sun is the star at the center of the Solar System. 
-    It is a nearly perfect ball of hot plasma,[18][19] heated to incandescence by nuclear fusion reactions in its core,
-    radiating the energy mainly as light, ultraviolet, and infrared radiation. It is the most important source of energy 
-    for life on Earth.`;
-  switch (locale) {
-    case 'de':
-      title = 'Sonne';
-      body = `Die Sonne ist der Stern, der der Erde am nächsten ist und das Zentrum des Sonnensystems bildet. 
-    Sie ist ein durchschnittlich großer Stern im äußeren Drittel der Milchstraße. Die Sonne ist ein Zwergstern (Gelber Zwerg), 
-    der sich im Entwicklungsstadium der Hauptreihe befindet. Sie enthält 99,86 % der Masse, jedoch nur ca. 0,5 % des Drehimpulses 
-    des Sonnensystems.`;
-      break;
-    case 'es':
-      title = 'Sol';
-      break;
-  }
-  return { title, body };
+BlogArticlePage.defaultProps = {
+  localization: {
+    path: '',
+    basePath: '',
+    locales: ['en'],
+  },
+  properties: {
+    title: '',
+    body: '',
+  },
 };
 
-export const locales = async () => {
-  return ['en', 'de', 'es'];
+BlogArticlePage.propTypes = {
+  localization: PropTypes.shape({
+    path: PropTypes.string,
+    basePath: PropTypes.string,
+    locales: PropTypes.arrayOf(PropTypes.string),
+  }),
+  properties: PropTypes.shape({
+    title: PropTypes.string,
+    body: PropTypes.string,
+  }),
 };
 
-export const staticPathProperties = async (data) => {
-  return [{ article: 'article-1' }, { article: 'article-2' }];
+export default BlogArticlePage;
+
+export const properties = async (data) => {
+  const { locale } = data.localization;
+  const { article } = data.pathParams;
+  const result = await import(`../../../content/${article}`);
+  const content = result.default[locale];
+  return content;
 };
+
+export const locales = async () => ['en', 'de'];
+
+export const staticPathParams = async () => [{ article: 'article-1' }, { article: 'article-2' }];
