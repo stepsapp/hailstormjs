@@ -12,16 +12,23 @@ const HomePage = () => (
       <p className="md:w-1/2 lg:w-1/3 block text-black/30">
         Hailstorm helps you to build static websites which are SEO and multi-language compatible and offers a hassle free environment for developers.
       </p>
-      <div className="pt-5 flex gap-1">
-        <img src="https://img.shields.io/npm/v/@stepsapp/hailstormjs" className="inline" alt="version" />
-        <img src="https://img.shields.io/npm/dm/@stepsapp/hailstormjs" className="inline" alt="downloads" />
-        <a className="github-button pr-2 inline-block" href="https://github.com/stepsapp/hailstormjs" data-icon="octicon-star" aria-label="Star stepsapp/hailstormjs on GitHub">
-          Star
-        </a>
-        &nbsp;
-        <a className="github-button" href="https://github.com/stepsapp/hailstormjs/archive/HEAD.zip" data-icon="octicon-download" aria-label="Download stepsapp/hailstormjs on GitHub">
-          Download
-        </a>
+      <div className="pt-5 flex gap-1 content-center ">
+        <div>
+          <img src="https://img.shields.io/npm/v/@stepsapp/hailstormjs" className="inline" alt="version" width="110" height="26" />
+        </div>
+        <div>
+          <img src="https://img.shields.io/npm/dm/@stepsapp/hailstormjs" className="inline" alt="downloads" width="140" height="20" />
+        </div>
+        <div className="pt-1">
+          <a className="github-button pr-2 inline" href="https://github.com/stepsapp/hailstormjs" data-icon="octicon-star" aria-label="Star stepsapp/hailstormjs on GitHub">
+            Star
+          </a>
+        </div>
+        <div className="pt-1">
+          <a className="github-button" href="https://github.com/stepsapp/hailstormjs/archive/HEAD.zip" data-icon="octicon-download" aria-label="Download stepsapp/hailstormjs on GitHub">
+            Download
+          </a>
+        </div>
       </div>
 
       <div className="mx-auto my-10">
@@ -63,9 +70,9 @@ const HomePage = () => (
         <hr />
       </div>
       <h2 className="text-2xl mb-5 font-bold">Getting started</h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-10">
+      <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-10">
         <div>
-          <div className="mb-10">
+          <div>
             <h3 className="text-xl mb-3">Installation</h3>
             <p className="text-sm text-black/50 mb-3">
               1. Make sure you have installed the lastest version of&nbsp;
@@ -74,29 +81,29 @@ const HomePage = () => (
               </a>
               &nbsp; or at least version 16. Then install hailstormjs via commandline in your project root.
             </p>
-            <div className="bg-black/5 p-5 rounded-md text-sm">
+            <div className="bg-black text-white p-5 rounded-md text-sm">
               <code>$ npm i @stepsapp/hailstormjs</code>
             </div>
             <p className="text-sm text-black/50 mb-3 mt-5">2. Initialise everything hailstorm needs</p>
-            <div className="bg-black/5 p-5 rounded-md text-sm">
+            <div className="bg-black text-white p-5 rounded-md text-sm">
               <code>$ npx exec hailstorm init</code>
             </div>
             <p className="text-sm text-black/50 mb-3 mt-5">3. Start hailstorm</p>
-            <div className="bg-black/5 p-5 rounded-md text-sm">
+            <div className="bg-black text-white p-5 rounded-md text-sm">
               <code>$ npx exec hailstorm start</code>
             </div>
           </div>
         </div>
         <div>
-          <div className="mb-10">
+          <div>
             <h3 className="text-xl mb-3">Watch for changes</h3>
             <p className="text-sm text-black/50 mb-3">If you want hailstorm to reload atuomatically assets, styles and pages use this command.</p>
-            <div className="bg-black/5 p-5 rounded-md text-sm">
+            <div className="bg-black text-white p-5 rounded-md text-sm">
               <code>$ npx exec hailstorm watch</code>
             </div>
             <h3 className="text-xl mb-3 mt-5">Build static version of your website</h3>
             <p className="text-sm text-black/50 mb-3 mt-5">Hailstorm will collect everything and preapre a folder for deployment</p>
-            <div className="bg-black/5 p-5 rounded-md text-sm">
+            <div className="bg-black text-white p-5 rounded-md text-sm">
               <code>$ npx exec hailstorm build</code>
             </div>
           </div>
@@ -106,7 +113,7 @@ const HomePage = () => (
         <hr />
       </div>
       <div className="text-sm">
-        Made with ❤️ &nbps;
+        Made with ❤️ &nbsp;
         <a href="https://steps.app" className="underline hover:cursor-pointer">
           @stepsapp
         </a>

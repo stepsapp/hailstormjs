@@ -6,6 +6,7 @@ const Component = ({ children, title }) => (
     <head>
       <title>{title}</title>
       <link rel="stylesheet" href="/css/styles.css" />
+      <script async defer src="https://buttons.github.io/buttons.js" />
     </head>
     <body>
       <div className="container mx-auto">{children}</div>
