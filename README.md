@@ -40,7 +40,7 @@ $ npm exec hailstorm init
 2. Start Hailstorm
 
 ```
-$ npm exec hailstorm start
+$ npm exec hailstorm watch
 ```
 
 3. Open http://localhost:3000 in your browser.
