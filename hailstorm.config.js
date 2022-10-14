@@ -1,6 +1,6 @@
 export default {
-  baseURL: 'http://localhost:3000',
-  output: 'dist',
+  baseURL: 'https://hailstormjs.steps.app/',
+  output: 'docs',
   defaultLocale: 'en',
   defaultLocales: ['en'],
 };
