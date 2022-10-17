@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const NavigationComponent = ({ localization }) => {
+const NavigationComponent = ({ localization, i18n }) => {
   const { locale } = localization;
   const isHomePageAvailableInLanguage = (currentLocale) => {
     // Only do this if really needed
@@ -26,7 +26,7 @@ const NavigationComponent = ({ localization }) => {
           </li>
         </ul>
         <ul className="mt-1.5 flex ml-4">
-          <li className="font-medium mr-2">This page is also available in</li>
+          <li className="font-medium mr-2">{i18n.__('This page is also available in')}</li>
           {localization.locales.map((localeItem) => (
             <li key={localeItem} className="font-medium hover:underline mr-2">
               <a href={`/${localeItem}${localization.basePath}`}>{localeItem}</a>
@@ -40,6 +40,9 @@ const NavigationComponent = ({ localization }) => {
 };
 
 NavigationComponent.defaultProps = {
+  i18n: {
+    __: () => {},
+  },
   localization: {
     path: '',
     basePath: '',
@@ -49,6 +52,9 @@ NavigationComponent.defaultProps = {
 };
 
 NavigationComponent.propTypes = {
+  i18n: PropTypes.shape({
+    __: PropTypes.func,
+  }),
   localization: PropTypes.shape({
     path: PropTypes.string,
     basePath: PropTypes.string,

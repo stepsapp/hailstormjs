@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Document from '../../components/document';
 
-const BlogPage = ({ properties, localization }) => {
+const BlogPage = ({ properties, localization, i18n }) => {
   const { articles } = properties;
   const { locale } = localization;
   return (
-    <Document localization={localization}>
+    <Document localization={localization} i18n={i18n}>
       <div className="container mt-10">
-        <h1 className="text-5xl mb-5">Blog</h1>
-        <h2 className="mb-5">A example blog</h2>
+        <h1 className="text-5xl mb-5">{i18n.__('Blog')}</h1>
+        <h2 className="mb-5">{i18n.__('A example blog')}</h2>
         {articles.map((article) => (
           <div key={article.path}>
             <div className="my-5">
@@ -30,6 +30,9 @@ const BlogPage = ({ properties, localization }) => {
 };
 
 BlogPage.defaultProps = {
+  i18n: {
+    __: () => {},
+  },
   localization: {
     path: '',
     basePath: '',
@@ -48,6 +51,9 @@ BlogPage.defaultProps = {
 };
 
 BlogPage.propTypes = {
+  i18n: PropTypes.shape({
+    __: PropTypes.func,
+  }),
   localization: PropTypes.shape({
     path: PropTypes.string,
     basePath: PropTypes.string,

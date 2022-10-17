@@ -2,14 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Navigation from './navigation';
 
-const Component = ({ children, title, localization }) => (
+const Component = ({
+  children,
+  title,
+  localization,
+  i18n,
+}) => (
   <html lang="en">
     <head>
       <title>{title}</title>
       <link rel="stylesheet" href="/css/styles.css" />
     </head>
     <body>
-      <Navigation localization={localization} />
+      <Navigation localization={localization} i18n={i18n} />
       <div className="container mx-auto">{children}</div>
       <script src="/client/bundle.js" />
     </body>
@@ -17,6 +22,9 @@ const Component = ({ children, title, localization }) => (
 );
 
 Component.defaultProps = {
+  i18n: {
+    __: () => {},
+  },
   title: '',
   localization: {
     path: '',
@@ -27,6 +35,9 @@ Component.defaultProps = {
 };
 
 Component.propTypes = {
+  i18n: PropTypes.shape({
+    __: PropTypes.func,
+  }),
   title: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
   localization: PropTypes.shape({
