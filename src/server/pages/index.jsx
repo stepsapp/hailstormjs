@@ -37,5 +37,3 @@ HomePage.propTypes = {
 };
 
 export default HomePage;
-
-export const locales = () => ['en'];

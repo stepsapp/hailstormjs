@@ -79,5 +79,3 @@ export const properties = async (data) => {
   articles.push(article2Result.default[locale]);
   return { articles };
 };
-
-export const locales = async () => ['en', 'de'];

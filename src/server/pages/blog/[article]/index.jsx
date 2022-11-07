@@ -52,6 +52,4 @@ export const properties = async (data) => {
   return content;
 };
 
-export const locales = async () => ['en', 'de'];
-
 export const staticPathParams = async () => [{ article: 'article-1' }, { article: 'article-2' }];

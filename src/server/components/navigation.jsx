@@ -3,13 +3,6 @@ import PropTypes from 'prop-types';
 
 const NavigationComponent = ({ localization, i18n }) => {
   const { locale } = localization;
-  const isHomePageAvailableInLanguage = (currentLocale) => {
-    // Only do this if really needed
-    // eslint-disable-next-line global-require
-    const { locales } = require('../pages/index');
-    if (locales().includes(currentLocale)) return currentLocale;
-    return 'en';
-  };
   return (
     <div>
       <div className="flex mx-5 my-5 content-center">
@@ -19,7 +12,7 @@ const NavigationComponent = ({ localization, i18n }) => {
         </a>
         <ul className="mt-1.5 flex ml-4 grow">
           <li className="font-medium hover:underline mr-2">
-            <a href={`/${isHomePageAvailableInLanguage(locale)}`}>Home</a>
+            <a href={`/${locale}`}>Home</a>
           </li>
           <li className="font-medium hover:underline mr-2">
             <a href={`/${locale}/blog`}>Blog Example</a>

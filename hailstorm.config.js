@@ -2,5 +2,5 @@ export default {
   baseURL: 'http://localhost:3000',
   output: 'dist',
   defaultLocale: 'en',
-  defaultLocales: ['en'],
+  defaultLocales: ['en', 'de'],
 };
