@@ -1,15 +1,15 @@
 {
   "name": "@stepsapp/hailstormjs",
-  "version": "1.0.0-beta.8",
+  "version": "1.0.0-beta.11",
   "description": "A real react static website generate",
   "main": "cli.js",
   "repository": {
     "url": "https://github.com/stepsapp/hailstormjs"
   },
   "scripts": {
-    "start": "node ./cli.js start",
-    "watch": "node ./cli.js watch",
-    "build": "node ./cli.js build",
+    "start": "node ./cli.js start development",
+    "watch": "node ./cli.js watch development",
+    "build": "node ./cli.js build production",
     "serve": "firebase serve --only hosting"
   },
   "bin": {

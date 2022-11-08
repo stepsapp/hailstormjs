@@ -34,5 +34,12 @@ const exec = async (cmd) => {
   }
 };
 
+if (typeof process.env.NODE_ENV === 'undefined') {
+  const environment = process.argv.slice(2)[1];
+  if (environment) {
+    process.env.NODE_ENV = environment;
+  }
+}
+
 const cmd = process.argv.slice(2)[0];
 exec(cmd);

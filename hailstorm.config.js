@@ -1,6 +1,14 @@
 export default {
-  baseURL: 'http://localhost:3000',
-  output: 'dist',
-  defaultLocale: 'en',
-  defaultLocales: ['en', 'de'],
+  development: {
+    baseURL: 'http://localhost:3000',
+    output: 'dist',
+    defaultLocale: 'en',
+    locales: ['en', 'de'],
+  },
+  production: {
+    baseURL: 'http://localhost:3000',
+    output: 'dist',
+    defaultLocale: 'en',
+    locales: ['en', 'de'],
+  },
 };
