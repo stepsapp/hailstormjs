@@ -13,7 +13,10 @@ const BlogPage = ({ properties, localization, i18n }) => {
         {articles.map((article) => (
           <div key={article.path}>
             <div className="my-5">
-              <a className="text-2xl mb-2 block hover:underline" href={`/${locale}/blog/${article.path}`}>
+              <a
+                className="text-2xl mb-2 block hover:underline"
+                href={`/${locale}/blog/${article.path}`}
+              >
                 {article.title}
               </a>
               <p>
