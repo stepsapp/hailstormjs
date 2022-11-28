@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 /* eslint-disable global-require */
 require('./lib/modules/babel');
+const paths = require('./lib/modules/paths');
 
 const exec = async (cmd) => {
   const pjson = require('./package.json');
-  const { paths, copyFiles, copyFile } = require('./lib/modules/common');
+  const { copyFiles, copyFile } = require('./lib/modules/common');
   const logger = require('./lib/modules/logger').default;
   logger.debug(`Hailstorm - ${pjson.version}`);
 

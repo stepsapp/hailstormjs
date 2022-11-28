@@ -7,6 +7,7 @@
     "url": "https://github.com/stepsapp/hailstormjs"
   },
   "scripts": {
+    "init": "node ./cli.js init",
     "start": "node ./cli.js start development",
     "watch": "node ./cli.js watch development",
     "build": "node ./cli.js build production",
